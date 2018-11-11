@@ -4,12 +4,12 @@
     android:layout_height="45dp"
     android:background="@color/theme_red"
     android:gravity="center_vertical"
-    android:orientation="horizontal" >
+    android:orientation="horizontal">
 
     <RelativeLayout
         android:id="@+id/rl_left"
         android:layout_width="60dp"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <ImageView
             android:id="@+id/img_left"
@@ -33,19 +33,18 @@
         android:id="@+id/rl_right"
         android:layout_width="60dp"
         android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        >
+        android:layout_alignParentRight="true">
 
         <TextView
+            android:id="@+id/tv_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="15dp"
-            android:textSize="14sp"
             android:text="扫描"
             android:textColor="@color/white"
-             />
+            android:textSize="14sp" />
     </RelativeLayout>
 
 </RelativeLayout>
