@@ -6,7 +6,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="95dp">
-    <com.shoppay.szvipnewzh.view.RoundImageView
+    <com.shoppay.jinma.view.RoundImageView
         android:id="@+id/item_viplist_img"
         android:layout_width="65dp"
         android:layout_height="65dp"

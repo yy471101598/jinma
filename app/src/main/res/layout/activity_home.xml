@@ -21,7 +21,7 @@
                     >
 
 
-        <com.shoppay.szvipnewzh.view.MyGridViews
+        <com.shoppay.jinma.view.MyGridViews
             android:id="@+id/gridview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

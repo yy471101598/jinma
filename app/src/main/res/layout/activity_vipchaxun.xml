@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:textSize="15sp"
             android:textColor="@color/text_30"
-            android:text="会员积分"
+            android:text="限店积分"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             />
@@ -113,6 +113,68 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/viewcolor"></View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_30"
+                    android:text="通用积分"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/vip_tv_tyjifen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:textColor="@color/text_30"
+                    android:gravity="center_vertical|right"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viewcolor"></View>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_30"
+                    android:text="礼品积分"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:id="@+id/vip_tv_lpjifen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:textColor="@color/text_30"
+                    android:gravity="center_vertical|right"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viewcolor"></View>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"

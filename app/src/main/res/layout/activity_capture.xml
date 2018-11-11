@@ -15,7 +15,7 @@
             android:layout_marginTop="45dp"
             android:layout_gravity="center" />
 
-        <com.shoppay.szvipnewzh.zxing.view.ViewfinderView
+        <com.shoppay.jinma.zxing.view.ViewfinderView
             android:id="@+id/viewfinder_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

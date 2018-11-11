@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">商助会员通</string>
+    <string name="app_name">金马</string>
     <string name="version">1.1</string>
     <string name="scan_text">将二维码/条码放入框内, 即可自动扫描</string>
     <string name="gitee">git</string>

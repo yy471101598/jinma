@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.shoppay.szvipnewzh">
+    package="com.shoppay.jinma">
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
@@ -13,13 +13,13 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="25" />
     <application
-        android:name="com.shoppay.szvipnewzh.MyApplication"
+        android:name="com.shoppay.jinma.MyApplication"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:allowBackup="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.shoppay.szvipnewzh.SplashActivity"
+        <activity android:name="com.shoppay.jinma.SplashActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
 
@@ -32,87 +32,87 @@
             </intent-filter>
         </activity>
         <activity
-        android:name="com.shoppay.szvipnewzh.HomeActivity"
+        android:name="com.shoppay.jinma.HomeActivity"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
         />
         <activity
-            android:name="com.shoppay.szvipnewzh.wxcode.MipcaActivityCapture"
+            android:name="com.shoppay.jinma.wxcode.MipcaActivityCapture"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.PersonalActivity"
+            android:name="com.shoppay.jinma.PersonalActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.YingxiaoCenterActivity"
+            android:name="com.shoppay.jinma.YingxiaoCenterActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.VipChaxunActivity"
+            android:name="com.shoppay.jinma.VipChaxunActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.VipQiandaoActivity"
+            android:name="com.shoppay.jinma.VipQiandaoActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.JifenDuihuanActivity"
+            android:name="com.shoppay.jinma.JifenDuihuanActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.JifenChangeActivity"
+            android:name="com.shoppay.jinma.JifenChangeActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.DuihuanjiluActivity"
+            android:name="com.shoppay.jinma.DuihuanjiluActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.XiaofeiRecordActivity"
+            android:name="com.shoppay.jinma.XiaofeiRecordActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             />
         <activity
-            android:name="com.shoppay.szvipnewzh.LoginActivity"
+            android:name="com.shoppay.jinma.LoginActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.NumRechargeActivity"
+            android:name="com.shoppay.jinma.NumRechargeActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.HomeOldActivity"
+            android:name="com.shoppay.jinma.HomeOldActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.NewBossCenterActivity"
+            android:name="com.shoppay.jinma.NewBossCenterActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.VipListActivity"
+            android:name="com.shoppay.jinma.VipListActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.VipDetailActivity"
+            android:name="com.shoppay.jinma.VipDetailActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.VipRechargeActivity"
+            android:name="com.shoppay.jinma.VipRechargeActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
@@ -122,27 +122,27 @@
             <!--android:screenOrientation="portrait"-->
             <!--android:theme="@android:style/Theme.Holo.Light.NoActionBar" />-->
         <activity
-            android:name="com.shoppay.szvipnewzh.BalanceActivity"
+            android:name="com.shoppay.jinma.BalanceActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.FastConsumptionActivity"
+            android:name="com.shoppay.jinma.FastConsumptionActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.NumConsumptionActivity"
+            android:name="com.shoppay.jinma.NumConsumptionActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
         <activity
-            android:name="com.shoppay.szvipnewzh.VipCardActivity"
+            android:name="com.shoppay.jinma.VipCardActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
-        <service android:name="com.shoppay.szvipnewzh.wxpay.PayResultPollService"></service>
-        <receiver android:name="com.shoppay.szvipnewzh.wxpay.AlarmReceiver"></receiver>
+        <service android:name="com.shoppay.jinma.wxpay.PayResultPollService"></service>
+        <receiver android:name="com.shoppay.jinma.wxpay.AlarmReceiver"></receiver>
     </application>
 
 </manifest>

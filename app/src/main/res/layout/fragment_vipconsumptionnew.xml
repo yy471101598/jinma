@@ -1,0 +1,919 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroudcolor"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/vip_tv_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="会员卡号"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_card"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入会员卡号"
+                    android:textColor="@color/text_30"
+                    android:textColorHint="@color/text_66"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viewcolor"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="会员姓名"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/vip_tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/viewcolor"></View>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/viewcolor"></View>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="限店积分"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/vip_tv_jifen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/viewcolor"></View>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="通用积分"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/vip_tv_tyjifen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/viewcolor"></View>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/viewcolor"></View>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="礼品积分"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/vip_tv_lpjifen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/viewcolor"></View>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="会员余额"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/vip_tv_vipyue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/viewcolor"></View>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/viewcolor"></View>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="会员等级"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/vip_tv_vipdengji"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:textColor="@color/text_30"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/viewcolor"></View>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/vip_tv_xfmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="消费金额"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_xfmoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_xfmoney"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入消费金额"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/theme_red"
+                    android:textColorHint="@color/theme_red"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viewcolor"></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="折后金额"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/vip_tv_zhmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="0.00"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viewcolor"></View>
+
+            <RelativeLayout
+                android:id="@+id/rl_yuepay"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/vip_tv_yuepay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="余额支付"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_yuepay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_yuepay"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint=""
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/theme_red"
+                    android:textColorHint="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_moneypay"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/vip_tv_moneypay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="现金支付"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_moneypay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_moneypay"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint=""
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/theme_red"
+                    android:textColorHint="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_yinlianpay"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/vip_tv_yinlianpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="银联支付"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_yinlianpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_yinlianpay"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint=""
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/theme_red"
+                    android:textColorHint="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_xdjfpay"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/vip_tv_xdjfpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="限店积分"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_xdjfpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_xdjfpay"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint=""
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/theme_red"
+                    android:textColorHint="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_tyjfpay"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/vip_tv_tyjfpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="通用积分"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_tyjfpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_tyjfpay"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint=""
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/theme_red"
+                    android:textColorHint="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="扫码支付"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <LinearLayout
+                    android:id="@+id/radiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_wx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/tv_wx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="3dp"
+                            android:text="微信"
+                            android:textColor="@color/text_30"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_zhifubao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_zhifubao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:paddingLeft="5dp"
+                            android:paddingTop="3dp"
+                            android:paddingRight="5dp"
+                            android:paddingBottom="3dp"
+                            android:text="支付宝"
+                            android:textColor="@color/text_30"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_qita"
+                        style="@style/CouldRecharge_btn_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="3dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="3dp"
+                        android:text="其他支付"
+                        android:textColor="@color/text_30"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viewcolor"></View>
+
+            <RelativeLayout
+                android:id="@+id/consumption_rl_money"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/vip_tv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="支付金额"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_money"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_money"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入支付金额"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/vip_rl_password"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/vip_tv_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="会员密码"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_password"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入会员密码"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/consumption_rl_yue"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/vip_tv_yue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="余额支付"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_yue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_yue"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入支付金额"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/consumption_rl_jifen"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/vip_tv_j"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="积分支付"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/vip_et_jifen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/vip_tv_j"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:hint="请输入支付积分"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/consumption_rl_maxdk"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="积分最大抵扣"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/vip_tv_maxdk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="0.0"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/consumption_rl_jfdk"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="积分抵扣金额"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/vip_tv_dkmoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="0.0"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/viewcolor"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="可得积分"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/vip_tv_hasjf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="0.00"
+                    android:textColor="@color/text_30"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/viewcolor"></View>
+
+
+            <RelativeLayout
+                android:id="@+id/vip_rl_jiesuan"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/kuang_red_red">
+
+                <TextView
+                    android:id="@+id/tv_jiesuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="结算"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/backgroudcolor"></View>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
