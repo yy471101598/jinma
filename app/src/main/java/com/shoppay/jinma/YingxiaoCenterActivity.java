@@ -89,6 +89,10 @@ public class YingxiaoCenterActivity extends Activity {
     TextView mTvXiandian;
     @Bind(R.id.tv_xftongyong)
     TextView mTvTongyong;
+    @Bind(R.id.tv_xfxiandianm)
+    TextView mTvXiandianm;
+    @Bind(R.id.tv_xftongyongm)
+    TextView mTvTongyongm;
     @Bind(R.id.tv_xfheji)
     TextView mTvXfheji;
     @Bind(R.id.rl_right)
@@ -205,8 +209,10 @@ public class YingxiaoCenterActivity extends Activity {
         mTvXfzhifubao.setText(yx.getOrderAlipay());
         mTvXfweixin.setText(yx.getOrderWeChatPay());
         mTvXfyinlian.setText(yx.getOrderUnion());
-        mTvXiandian.setText(yx.getOrderDYPointMoney());
-        mTvTongyong.setText(yx.OrderDYOtherPointMoney);
+        mTvXiandian.setText(yx.OrderDYPoint);
+        mTvTongyong.setText(yx.OrderDYOtherPoint);
+        mTvXiandianm.setText(yx.OrderDYPointMoney);
+        mTvTongyongm.setText(yx.OrderDYOtherPointMoney);
         mTvXfheji.setText(yx.getOrderSubtotal());
 
     }

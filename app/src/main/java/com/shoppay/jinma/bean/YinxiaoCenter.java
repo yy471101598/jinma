@@ -58,11 +58,11 @@ public class YinxiaoCenter {
     private String OrderSubtotal;
     private String PointToBalance;
     private String PointToCash;
-    private String OrderDYPoint;
-    private String OrderDYPointMoney;
     private String MemCount;
+    public String OrderDYPoint;//= 限定积分支付数量
+    public String OrderDYPointMoney;// =限定积分支付金额
     public String OrderDYOtherPoint;// = 通用积分支付数量
-    public String        OrderDYOtherPointMoney;// = 通用积分支付金额
+    public String OrderDYOtherPointMoney;// = 通用积分支付金额
 
     public String getShopID() {
         return ShopID;
