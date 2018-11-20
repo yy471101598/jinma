@@ -30,10 +30,12 @@ import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
 import com.shoppay.jinma.adapter.JifenDuihuanAdapter;
 import com.shoppay.jinma.bean.JifenDuihuan;
+import com.shoppay.jinma.bean.SystemQuanxian;
 import com.shoppay.jinma.bean.VipInfo;
 import com.shoppay.jinma.bean.VipInfoMsg;
 import com.shoppay.jinma.card.ReadCardOpt;
 import com.shoppay.jinma.db.DBAdapter;
+import com.shoppay.jinma.http.InterfaceBack;
 import com.shoppay.jinma.tools.ActivityStack;
 import com.shoppay.jinma.tools.BluetoothUtil;
 import com.shoppay.jinma.tools.CommonUtils;
@@ -41,6 +43,7 @@ import com.shoppay.jinma.tools.DateUtils;
 import com.shoppay.jinma.tools.DayinUtils;
 import com.shoppay.jinma.tools.DialogUtil;
 import com.shoppay.jinma.tools.LogUtils;
+import com.shoppay.jinma.tools.NoDoubleClickListener;
 import com.shoppay.jinma.tools.PreferenceHelper;
 import com.shoppay.jinma.tools.UrlTools;
 import com.shoppay.jinma.wxcode.MipcaActivityCapture;
@@ -132,7 +135,6 @@ public class JifenDuihuanActivity extends Activity {
     private ShopChangeReceiver shopChangeReceiver;
     private int num=0;
     private  int point=0;
-    private boolean isClick=true;
     private Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -191,12 +193,17 @@ public class JifenDuihuanActivity extends Activity {
     private Dialog dialog;
     private String editString;
     private String shopcode="";
+    private SystemQuanxian sysquanxian;
+    private MyApplication app;
+    private String password="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jifenduihuan);
         ac = this;
+        app = (MyApplication) getApplicationContext();
+        sysquanxian = app.getSysquanxian();
         ButterKnife.bind(this);
         dialog = DialogUtil.loadingDialog(ac, 1);
         PreferenceHelper.write(context, "shoppay", "viptoast", "未查询到会员");
@@ -264,6 +271,43 @@ public class JifenDuihuanActivity extends Activity {
             }
         });
 
+
+        rlDuihuan.setOnClickListener(new NoDoubleClickListener() {
+            @Override
+            protected void onNoDoubleClick(View view) {
+                if(tvAllnum.getText().toString().equals("0")){
+                    Toast.makeText(ac,"请选择一种商品",Toast.LENGTH_SHORT).show();
+                }else{
+                    if(isSuccess){
+
+                            if(Double.parseDouble(vipTvJifen.getText().toString())<point) {
+                                Toast.makeText(ac, "积分不足", Toast.LENGTH_SHORT).show();
+                            }else {
+
+                               if( sysquanxian.ispassword == 1) {
+                                    DialogUtil.pwdDialog(JifenDuihuanActivity.this, 1, new InterfaceBack() {
+                                        @Override
+                                        public void onResponse(Object response) {
+                                            password = (String) response;
+                                            jifenJiesuan();
+                                        }
+
+                                        @Override
+                                        public void onErrorResponse(Object msg) {
+
+                                        }
+                                    });
+
+                            }else{
+                                   jifenJiesuan();
+                               }
+                            }
+                    }else{
+                        Toast.makeText(ac,"请获取会员信息",Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
 
 //        PreferenceHelper.write(getApplicationContext(), "PayOk", "time", "false");
 //        //动态注册广播接收器
@@ -473,7 +517,7 @@ public class JifenDuihuanActivity extends Activity {
         }
     }
 
-    @OnClick({R.id.rl_left, R.id.rl_right, R.id.item_iv_add, R.id.item_iv_del, R.id.rl_duihuan,R.id.vip_tv_dingwei})
+    @OnClick({R.id.rl_left, R.id.rl_right, R.id.item_iv_add, R.id.item_iv_del,R.id.vip_tv_dingwei})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.rl_left:
@@ -514,23 +558,6 @@ public class JifenDuihuanActivity extends Activity {
                     tvAllnum.setText(num+"");
                     tvAlljifen.setText(CommonUtils.multiply(num+"",jifenDuihuan.GiftExchangePoint));
                 break;
-            case R.id.rl_duihuan:
-                if(tvAllnum.getText().toString().equals("0")){
-                    Toast.makeText(ac,"请选择一种商品",Toast.LENGTH_SHORT).show();
-                }else{
-                    if(isSuccess){
-                        if(isClick) {
-                            if(Double.parseDouble(vipTvJifen.getText().toString())<point) {
-                                Toast.makeText(ac, "积分不足", Toast.LENGTH_SHORT).show();
-                            }else {
-                                jifenJiesuan();
-                            }
-                        }
-                    }else{
-                        Toast.makeText(ac,"请获取会员信息",Toast.LENGTH_SHORT).show();
-                    }
-                }
-                break;
             case R.id.vip_tv_dingwei:
                 Intent duihuan = new Intent(ac, MipcaActivityCapture.class);
                 startActivityForResult(duihuan, 222);
@@ -540,8 +567,6 @@ public class JifenDuihuanActivity extends Activity {
 
     private void jifenJiesuan() {
         dialog.show();
-        isClick=false;
-
         List<JifenDuihuan> listss = dbAdapter.getListJifenShopCar(PreferenceHelper.readString(context, "shoppay", "account", "123"));
         List<JifenDuihuan> jifenlist=new ArrayList<>();
         for(JifenDuihuan jf:listss){
@@ -559,6 +584,7 @@ public class JifenDuihuanActivity extends Activity {
         params.put("OrderAccount", DateUtils.getCurrentTime("yyyyMMddHHmmss"));
         params.put("GiftPoint",point);
         params.put("GiftCount",jifenlist.size());
+        params.put("UserPwd",password);
         for (int i = 0; i < jifenlist.size(); i++) {
             params.put("GiftList[" + i + "][GiftID]", jifenlist.get(i).GiftID);
             params.put("GiftList[" + i + "][GiftExchangePoint]", jifenlist.get(i).GiftExchangePoint);
@@ -591,12 +617,10 @@ public class JifenDuihuanActivity extends Activity {
                             }
                         }
                     } else {
-                       isClick=true;
                         Toast.makeText(ac, jso.getString("msg"), Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception e) {
                     dialog.dismiss();
-                    isClick=true;
                     Toast.makeText(ac,"兑换失败",Toast.LENGTH_SHORT).show();
                 }
             }
@@ -604,7 +628,6 @@ public class JifenDuihuanActivity extends Activity {
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
                 dialog.dismiss();
-                isClick=true;
                 Toast.makeText(ac,"兑换失败",Toast.LENGTH_SHORT).show();
             }
         });

@@ -221,7 +221,7 @@ public class VipFragmentNew extends Fragment {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                LogUtils.d("xxy",editable.toString());
+                LogUtils.d("xxy", editable.toString());
                 if (!editable.toString().equals("")) {
                     isWx = false;
                     rl_wx.setBackgroundColor(getResources().getColor(R.color.white));
@@ -619,6 +619,24 @@ public class VipFragmentNew extends Fragment {
 
                                     }
                                 });
+                            } else if (!et_xdjfpay.getText().toString().equals("") || !et_tyjfpay.getText().toString().equals("")) {
+                                if (sysquanxian.ispassword == 1) {
+                                    DialogUtil.pwdDialog(getActivity(), 1, new InterfaceBack() {
+                                        @Override
+                                        public void onResponse(Object response) {
+                                            password = (String) response;
+                                            jiesuan(DateUtils.getCurrentTime("yyyyMMddHHmmss"));
+                                        }
+
+                                        @Override
+                                        public void onErrorResponse(Object msg) {
+
+                                        }
+                                    });
+                                } else {
+                                    jiesuan(DateUtils.getCurrentTime("yyyyMMddHHmmss"));
+                                }
+
                             } else {
                                 jiesuan(DateUtils.getCurrentTime("yyyyMMddHHmmss"));
 
